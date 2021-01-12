@@ -10,8 +10,10 @@ int main()
 
     while (won != true)
     {
-        cout << "Player 1 (X): Where do you want to place your token: row column (0, 1, 2; separated by a space)" << endl;
+        cout << "Player 1 (X): Where do you want to place your token: row column (1, 2, 3; separated by a space)" << endl;
         cin >> x >> y;
+        x = x - 1;
+        y = y - 1;
         moves = moves + 1;
 
         if (gameboard[x][y] != '.') 
@@ -75,6 +77,8 @@ int main()
 
         cout << "Player 2 (O): Where do you want to place your token: row column (0, 1, 2; separated by a space)" << endl;
         cin >> x >> y;
+        x = x - 1;
+        y = y - 1;
         moves = moves + 1;
 
         if (gameboard[x][y] != '.') 
